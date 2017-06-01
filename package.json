@@ -1,0 +1,48 @@
+{
+  "name": "postcss-will-change-transition",
+  "version": "1.0.0",
+  "description": "PostCSS plugin to generate will-change for transition props",
+  "keywords": [
+    "postcss",
+    "css",
+    "postcss-plugin",
+    "will-change",
+    "transition"
+  ],
+  "author": "Anatoly Ostrovsky <andrey@sitnik.ru>",
+  "license": "MIT",
+  "repository": "megatolya/postcss-will-change-transition.git",
+  "dependencies": {
+    "postcss": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-postcss": "^2.0.2",
+    "jest": "^20.0.0",
+    "lint-staged": "^3.4.1",
+    "pre-commit": "^1.2.2"
+  },
+  "scripts": {
+    "lint-staged": "lint-staged",
+    "test": "jest --coverage && eslint *.js"
+  },
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "statements": 100
+      }
+    }
+  },
+  "eslintConfig": {
+    "extends": "eslint-config-postcss/es5",
+    "env": {
+      "jest": true
+    }
+  },
+  "lint-staged": {
+    "*.js": "eslint"
+  },
+  "pre-commit": [
+    "lint-staged"
+  ]
+}
