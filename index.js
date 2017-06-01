@@ -3,11 +3,11 @@ const postcss = require('postcss');
 module.exports = postcss.plugin('postcss-will-change-transition', function () {
     return function (css) {
         css.walkDecls('transition', function (decl) {
-            const already = decl.parent.some(i =>
-                i.type === 'decl' && i.prop === 'will-change'
+            const already = decl.parent.some(elem =>
+                elem.type === 'decl' && elem.prop === 'will-change'
             );
 
-            if (already) {
+            if (already || /all/.test(decl.value)) {
                 return;
             }
 

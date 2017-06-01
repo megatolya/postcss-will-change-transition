@@ -55,3 +55,17 @@ it('does not get confused by other selectors', () => {
     `;
     return run(input, output);
 });
+
+it('ignore `all` prop', () => {
+    const input  = `
+        a {
+            transition: all .2s ease-in-out;
+        }
+    `;
+    const output  = `
+        a {
+            transition: all .2s ease-in-out;
+        }
+    `;
+    return run(input, output);
+});
