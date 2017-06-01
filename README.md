@@ -1,4 +1,4 @@
-# PostCSS Will Change
+# PostCSS will change transition
 
 <img align="right" width="95" height="95"
      title="Philosopher’s stone, logo of PostCSS"
