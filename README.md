@@ -4,7 +4,7 @@
      title="Philosopher’s stone, logo of PostCSS"
      src="http://postcss.github.io/postcss/logo.svg">
 
-[PostCSS] PostCSS plugin to generate will-change for transition props.
+[PostCSS] plugin to generate will-change for transition props.
 
 This plugin adds `will-change` property after `transition` property to speed up animations.
 
