@@ -15,13 +15,13 @@ These hacks are required for browsers that do not support `will-change`.
 
 ```css
 .foo {
-    transition: opacity 0.2s ease, width;
+    transition: opacity 0.2s ease, width 0.2s ease;
 }
 ```
 
 ```css
 .foo {
-    transition: opacity 0.2s ease, width;
+    transition: opacity 0.2s ease, width 0.2s ease;
     will-change: opacity, width;
 }
 ```
