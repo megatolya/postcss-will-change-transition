@@ -8,8 +8,7 @@
 
 This plugin adds `will-change` property after `transition` property to speed up animations.
 
-These hacks are required for browsers that do not support `will-change`.
-
+Can be combined with [postcss/postcss-will-change].
 
 [PostCSS]:      https://github.com/postcss/postcss
 
@@ -25,6 +24,14 @@ These hacks are required for browsers that do not support `will-change`.
     will-change: opacity, width;
 }
 ```
+
+## Important note
+
+Make sure that if you use this plugin it does not contradict with `will-change` idea. Please see links below:
+
+- https://developer.mozilla.org/en-US/docs/Web/CSS/will-change
+- https://www.sitepoint.com/introduction-css-will-change-property/
+- https://css-tricks.com/almanac/properties/w/will-change/
 
 ## Usage
 
