@@ -1,4 +1,7 @@
 const postcss = require('postcss');
+const cssProps = require('css-properties-values');
+
+const transitionProps = cssProps.map(prop => prop.property);
 
 module.exports = postcss.plugin('postcss-will-change-transition', function () {
     return function (css) {
@@ -13,8 +16,14 @@ module.exports = postcss.plugin('postcss-will-change-transition', function () {
 
             const value = decl.value
                 .split(',')
-                .map(str => str.trim().split(' ')[0])
+                .map(str => str.trim().split(' '))
+                .filter(splitted => transitionProps.includes(splitted[0]))
+                .map(splitted => splitted[0])
                 .join(', ');
+
+            if (!value) {
+                return;
+            }
 
             decl.cloneAfter({
                 prop: 'will-change',

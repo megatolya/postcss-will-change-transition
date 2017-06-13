@@ -69,3 +69,33 @@ it('ignore `all` prop', () => {
     `;
     return run(input, output);
 });
+
+it('ignore `all` shorthands', () => {
+    const input  = `
+        a {
+            transition: .25s;
+        }
+
+        b {
+            transition: 0.25s;
+        }
+
+        c {
+            transition: 0.25s ease;
+        }
+    `;
+    const output  = `
+        a {
+            transition: .25s;
+        }
+
+        b {
+            transition: 0.25s;
+        }
+
+        c {
+            transition: 0.25s ease;
+        }
+    `;
+    return run(input, output);
+});
