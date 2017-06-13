@@ -1,4 +1,5 @@
 # PostCSS will change transition
+[PostCSS]:      https://github.com/postcss/postcss
 
 <img align="right" width="95" height="95"
      title="Philosopher’s stone, logo of PostCSS"
@@ -8,9 +9,9 @@
 
 This plugin adds `will-change` property after `transition` property to speed up animations.
 
-Can be combined with [postcss/postcss-will-change].
+Can be combined with [postcss-will-change](https://github.com/postcss/postcss-will-change) plugin.
 
-[PostCSS]:      https://github.com/postcss/postcss
+
 
 ```css
 .foo {
@@ -37,6 +38,9 @@ Make sure that if you use this plugin it does not contradict with `will-change` 
 
 ```js
 postcss([ require('postcss-will-change-transition') ])
+
+// with fallback plugin:
+postcss([ require('postcss-will-change-transition'), require('postcss-will-change')  ])
 ```
 
 See [PostCSS] docs for examples for your environment.
